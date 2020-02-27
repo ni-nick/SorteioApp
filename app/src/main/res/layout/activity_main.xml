@@ -10,11 +10,13 @@
         android:id="@+id/textViewresultados"
         android:layout_width="60dp"
         android:layout_height="22dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:text="Sorteio"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextfinal" />
 
     <EditText
@@ -33,24 +35,27 @@
     <EditText
         android:id="@+id/editTextfinal"
         android:layout_width="151dp"
-        android:layout_height="58dp"
+        android:layout_height="0dp"
         android:layout_marginTop="98dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="143dp"
+        android:layout_marginBottom="259dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/textViewresultados"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextinicial"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="140dp"
         android:onClick="sortear"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="415dp" />
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextfinal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

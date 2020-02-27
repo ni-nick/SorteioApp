@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     EditText editTextinicial, editTextfinal;
@@ -23,8 +26,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void sortear(View view) {
 
-        int inicial = Integer.parseInt(editTextinicial.getText().toString());
+        Button button = (Button) view;
+        button.setText("Sorteado");
 
-        textViewresultado.setText(Integer.toString(inicial));
+        int inicial = Integer.parseInt(editTextinicial.getText().toString());
+        int fim = Integer.parseInt(editTextfinal.getText().toString());
+
+
+        Random rand = new Random();
+            int numsortidos = rand.nextInt((fim - inicial) + 1) + inicial;
+            textViewresultado.setText(Integer.toString(numsortidos));
+
+
+
     }
 }
